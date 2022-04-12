@@ -17,7 +17,10 @@ public class ResultadoActivity extends AppCompatActivity {
         tvResultado = (TextView)findViewById(R.id.tvResultado);
 
         tvResultado = (TextView)findViewById(R.id.tvResultado);
-        String nombreUsuario = getIntent().getStringExtra("usuario");
-        tvResultado.setText("Bienvenido: " + nombreUsuario);
+        String nombre = getIntent().getStringExtra("Nombre");
+        String apellido = getIntent().getStringExtra("Apellido");
+        String semestre = getIntent().getStringExtra("Semestre");
+        String nc = getIntent().getStringExtra("NC");
+        tvResultado.setText("Bienvenido: " + nombre + " " + apellido + "\nSemestre: " + semestre + "\nNC:"+nc );
     }
 }
